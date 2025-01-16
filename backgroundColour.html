@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change background colour</title>
+</head>
+<body>
+  <input type="color" name="colour" id="colourInput">
+
+  <script>
+    const colourInput = document.getElementById('colourInput')
+    const body = document.querySelector('body')
+
+    colourInput.addEventListener('change', () => {
+      localStorage.color = colourInput.value
+      body.style.backgroundColor = localStorage.color
+    })
+  </script>
+</body>
+</html>
