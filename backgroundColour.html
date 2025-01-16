@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change background colour</title>
+  <title>Cambiar color de fondo</title>
 </head>
 <body>
-  <input type="color" name="colour" id="colourInput">
+  <h1>Color</h1>
+  <p>Elige un color de fondo y será almacenado</p>
+  <p>
+    <input type="color" name="colour" id="colourInput">
+  </p>
 
   <script>
     const colourInput = document.getElementById('colourInput')
     const body = document.querySelector('body')
 
-    colourInput.addEventListener('change', () => {
-      localStorage.color = colourInput.value
-      body.style.backgroundColor = localStorage.color
-    })
+    body.style.backgroundColor = localStorage.color || '#CCCCCC'
+
+    colourInput.addEventListener('input', () => {
+        localStorage.color = colourInput.value
+        body.style.backgroundColor = localStorage.color
+      }
+    )
   </script>
 </body>
 </html>
