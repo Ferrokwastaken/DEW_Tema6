@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+</head>
+<body>
+  <h1>Local Storage</h1>
+  <script>
+    // localStorage can be modified in 3 different ways
+    localStorage.color = 'green'
+    console.log(localStorage.color)
+
+    localStorage['color'] = 'red'
+    console.log(localStorage['color'])
+
+    localStorage.setItem('color', 'blue')
+    console.log(localStorage.getItem('color'))
+  </script>
+</body>
+</html>
